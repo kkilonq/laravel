@@ -149,6 +149,7 @@ Route::get('/user17/{profile}', function ($profile) {
     Route::get('/user40/', [TestController::class, 'HtmlTable']);
     Route::get('/user41/', [TestController::class, 'Workers2']);
     Route::get('/user42/', [TestController::class, 'UserArray']);
+	Route::get('/user43/', [TestController::class, 'UserArray2']);
 
 
 

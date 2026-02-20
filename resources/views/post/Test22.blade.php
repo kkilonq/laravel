@@ -1,9 +1,9 @@
 <x-layout>
+    @if (isset($array) && count($array) > 0 )
     @foreach ($array as $array2 )
-@if (isset($array2) && count($array2) > 0 )
-{{ $array2 }}
+    <p>{{$array2}}</p>
+    @endforeach
 @else
 в массиве нету элементов
 @endif
-    @endforeach
 </x-layout>

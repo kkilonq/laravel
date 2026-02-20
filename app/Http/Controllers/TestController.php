@@ -144,6 +144,11 @@ public function UserArray()
  $array = ['Петя','Игорь','Олег','Савелий'];
   return view('post.Test22',['array'=>$array]);
 }
+public function UserArray2()
+{
+ $array = ['Петя','Игорь','Олег','Савелий'];
+  return view('post.Test23',['array'=>$array]);
+}
 }
 
 
