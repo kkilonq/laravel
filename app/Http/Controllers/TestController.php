@@ -149,6 +149,25 @@ public function UserArray2()
  $array = ['Петя','Игорь','Олег','Савелий'];
   return view('post.Test23',['array'=>$array]);
 }
+public function arrayNumber2()
+{
+$number =[2,4,6,7,10];
+return view('post.Test24',['number'=>$number]);
+}
+public function arrayForeach()
+{
+$number = [2,1,0,7,2];
+return view('post.Test25',['number'=>$number]);
+}
+public function skipZero()
+{
+ $number = [2,1,0,7,2,0,6,1,2,98,0,2];
+return view('post.Test26',['number'=>$number]);
+}
+public function foryou()
+{
+    return view('post.Test27');
+}
 }
 
 

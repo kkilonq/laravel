@@ -150,6 +150,10 @@ Route::get('/user17/{profile}', function ($profile) {
     Route::get('/user41/', [TestController::class, 'Workers2']);
     Route::get('/user42/', [TestController::class, 'UserArray']);
 	Route::get('/user43/', [TestController::class, 'UserArray2']);
+	Route::get('/user44/', [TestController::class, 'arrayNumber2']);
+	Route::get('/user45/', [TestController::class, 'arrayForeach']);
+	Route::get('/user46/', [TestController::class, 'skipZero']);
+	Route::get('/user47/', [TestController::class, 'foryou']);
 
 
 

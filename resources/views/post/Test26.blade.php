@@ -1,9 +1,9 @@
 <x-layout>
     @foreach ($number as $numbers )
-    @if ($loop->index < count($number) - 3)
-    <b>{{$numbers}}</b>
+    @if ($numbers ===0)
+
     @else
-    <i>{{$numbers}}</i>
+    <p>{{$numbers}}</p>
     @endif
     @endforeach
 </x-layout>
