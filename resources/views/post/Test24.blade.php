@@ -6,4 +6,5 @@
     <i>{{$numbers}}</i>
     @endif
     @endforeach
+    
 </x-layout>

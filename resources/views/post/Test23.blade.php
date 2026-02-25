@@ -9,5 +9,6 @@
     <li>{{$loop->index+1}} - {{$array2}} </li>
     @endif
     @endforeach
+    
 </x-layout>
 </ul>

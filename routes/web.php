@@ -154,6 +154,7 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/user45/', [TestController::class, 'arrayForeach']);
 	Route::get('/user46/', [TestController::class, 'skipZero']);
 	Route::get('/user47/', [TestController::class, 'foryou']);
+	Route::get('/user48/', [TestController::class, '']);
 
 
 
