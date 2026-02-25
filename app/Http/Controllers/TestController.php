@@ -168,6 +168,10 @@ public function foryou()
 {
     return view('post.Test27');
 }
+public function testCollection()
+{
+     return view('pr6.co');
+}
 }
 
 
