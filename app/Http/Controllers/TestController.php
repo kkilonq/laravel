@@ -297,8 +297,32 @@ $collection11 = collect(['name' => 'Desk', 'price' => 100]);
 
 $collection11->doesntContain('Desk');
 
+$collection12 = collect(['a', 'b', 'a', 'c', 'b']);
 
-     return view('pr6.collectTest   ',['average'=>$average,'chunks'=>$chunks,'chunks1'=>$chunks1,'collapsed'=>$collapsed,'collectionB'=>$collectionB,'combined'=>$combined,'concatenated'=>$concatenated,'collection5'=>$collection5,'collection6'=>$collection6,'counted'=>$counted,'matrix'=>$matrix,'diff'=>$diff,'diff2'=>$diff2,'diff3'=>$diff3,'collection11'=>$collection11]);
+$collection12->duplicates();
+
+$www ='';
+$users = collect(['Саша','Маша','Паша']);
+$users->each(function ($user) use (&$www) {
+   $www .=  'Привет ' .$user ."<br>";
+});
+
+$ww = 
+$collection13 = collect([['John Doe', 35], ['Jane Doe', 33]]);
+
+$collection13->eachSpread(function ($name, $age) use (&$ww)// use нужен что бы брать оригинал коллекции для того что бы выводить значения через переменуню .= нужно что бы не перезаписывать в переменную а дополнять (посмотрел как детально работает через интернет)
+ {
+   $ww .= 'Привет я ' .$name .' мне ' .$age ."<br>";
+    
+});
+
+$collection14 = collect([1,2,3,4]);
+
+$collection14->every(function ($value, $key) {
+    return $value > 2;
+});
+
+     return view('pr6.collectTest   ',['average'=>$average,'chunks'=>$chunks,'chunks1'=>$chunks1,'collapsed'=>$collapsed,'collectionB'=>$collectionB,'combined'=>$combined,'concatenated'=>$concatenated,'collection5'=>$collection5,'collection6'=>$collection6,'counted'=>$counted,'matrix'=>$matrix,'diff'=>$diff,'diff2'=>$diff2,'diff3'=>$diff3,'collection11'=>$collection11,'collection12'=>$collection12,'users'=>$users,'ww'=>$ww,'www'=>$www,'collection13'=>$collection13,'collection14'=>$collection14]);
 }
 }
 
