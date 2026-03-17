@@ -316,13 +316,88 @@ $collection13->eachSpread(function ($name, $age) use (&$ww)// use нужен ч�
     
 });
 
-$collection14 = collect([1,2,3,4]);
+$collection14 = collect([]);
 
 $collection14->every(function ($value, $key) {
     return $value > 2;
 });
+$collection15 = collect(['product_id' => 1, 'price' => 100, 'discount' => false]);
 
-     return view('pr6.collectTest   ',['average'=>$average,'chunks'=>$chunks,'chunks1'=>$chunks1,'collapsed'=>$collapsed,'collectionB'=>$collectionB,'combined'=>$combined,'concatenated'=>$concatenated,'collection5'=>$collection5,'collection6'=>$collection6,'counted'=>$counted,'matrix'=>$matrix,'diff'=>$diff,'diff2'=>$diff2,'diff3'=>$diff3,'collection11'=>$collection11,'collection12'=>$collection12,'users'=>$users,'ww'=>$ww,'www'=>$www,'collection13'=>$collection13,'collection14'=>$collection14]);
+$filtered = $collection15->except(['price', 'discount']);
+
+$filtered->all();
+
+
+$collection16 = collect([1, 2, 3, 4]);
+
+$rs=$filtered = $collection16->filter(function ($value, $key) {
+    return $value > 2;
+});
+#dd($rs);
+
+
+$ps=collect([1, 2, 3, 4])->first(function ($value, $key) {
+    return $value > 2;
+});
+#dd($ps);
+#$collection17 = collect([1, 2, 3, 4,]);
+#$pp=$collection17->firstOrFail(function ($value, $key) {
+   # return $value > 5;
+#});
+#dd($pp);
+$collection18 = collect([
+    ['name' => 'Regena', 'age' => null],
+    ['name' => 'Linda', 'age' => 14],
+    ['name' => 'Diego', 'age' => 23],
+    ['name' => 'Linda', 'age' => 84],
+]);
+
+$ii=$collection18->firstWhere('name', 'Linda');
+#dd($ii);
+
+$collection19 = collect([
+    'name' => 'taylor',
+    'languages' => [
+        'php', 'javascript'
+    ]
+]);
+
+$hh=$flattened = $collection19->flatten();
+
+$flattened->all();
+#dd($hh);    
+
+$collection20 = collect([
+    'Apple' => [
+        [
+            'name' => 'iPhone 6S',
+            'brand' => 'Apple'
+        ],
+    ],
+    'Samsung' => [
+        [
+            'name' => 'Galaxy S7',
+            'brand' => 'Samsung'
+        ],
+    ],
+]);
+
+$io=$products = $collection20->flatten(1);
+
+$products->values()->all();
+#dd($io);
+
+     return view('pr6.collectTest',['average'=>$average,'chunks'=>$chunks,'chunks1'=>$chunks1,'collapsed'=>$collapsed,'collectionB'=>$collectionB,'combined'=>$combined,'concatenated'=>$concatenated,'collection5'=>$collection5,'collection6'=>$collection6,'counted'=>$counted,'matrix'=>$matrix,'diff'=>$diff,'diff2'=>$diff2,'diff3'=>$diff3,'collection11'=>$collection11,'collection12'=>$collection12,'users'=>$users,'ww'=>$ww,'www'=>$www,'collection13'=>$collection13,'collection14'=>$collection14,'filtered'=>$filtered,]);
+}
+public function everyTest()
+{
+    $collection14 = collect([]);
+
+$rr=$collection14->every(function ($value, $key)  {
+    return $value > 2;
+});
+dd($rr);
+ return view('pr6.every',['col14'=>$collection14]);
 }
 }
 
