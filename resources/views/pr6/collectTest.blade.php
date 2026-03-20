@@ -98,4 +98,9 @@
             ($collection = collect(['name' => 'taylor','languages' => ['php', 'javascript']]);$flattened = $collection->flatten();$flattened->all(); выведет - ['taylor', 'php', 'javascript'] Если необходимо, вы можете передать методу flatten аргумент «глубины»: В этом примере вызов flatten без указания глубины также привел бы к сглаживанию вложенных массивов, что привело бы к ['iPhone 6S', 'Apple', 'Galaxy S7', 'Samsung']. Предоставление глубины позволяет указать количество уровней, на которые будут сглажены вложенные массивы.['name' => 'iPhone 6S', 'brand' => 'Apple'],
         ['name' => 'Galaxy S7', 'brand' => 'Samsung'], )
         </p> 
+        <p>
+        <b> 24) flatten() - Метод flatten объединяет многомерную коллекцию в одноуровневую:</b><br>
+            ($collection = collect(['name' => 'taylor','languages' => ['php', 'javascript']]);$flattened = $collection->flatten();$flattened->all(); выведет - ['taylor', 'php', 'javascript'] Если необходимо, вы можете передать методу flatten аргумент «глубины»: В этом примере вызов flatten без указания глубины также привел бы к сглаживанию вложенных массивов, что привело бы к ['iPhone 6S', 'Apple', 'Galaxy S7', 'Samsung']. Предоставление глубины позволяет указать количество уровней, на которые будут сглажены вложенные массивы.['name' => 'iPhone 6S', 'brand' => 'Apple'],
+        ['name' => 'Galaxy S7', 'brand' => 'Samsung'], )
+        </p> 
 </x-layout>
