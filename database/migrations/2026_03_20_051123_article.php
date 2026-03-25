@@ -23,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('article', function (Blueprint $table) {
-            $table->dropColumn(['id','text','DateOfCreation']);
-    });
-}
+        Schema::dropIfExists('article');
+    }
 };
