@@ -156,6 +156,7 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/user47/', [TestController::class, 'foryou']);
 	Route::get('/user48/', [TestController::class, 'testCollection']);
 	Route::get('/user49/', [TestController::class, 'everyTest']);
+	Route::get('/user50/', [PostController::class, 'show']);
 		
 	
 
