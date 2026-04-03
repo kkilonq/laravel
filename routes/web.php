@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\Praktik9Controller;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -157,6 +158,11 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/user48/', [TestController::class, 'testCollection']);
 	Route::get('/user49/', [TestController::class, 'everyTest']);
 	Route::get('/user50/', [PostController::class, 'show']);
+	Route::get('/db/', [Praktik9Controller::class, 'q1']);
+	Route::get('/db1/', [Praktik9Controller::class, 'q2']);
+	Route::get('/db2/', [Praktik9Controller::class, 'q3']);
+	Route::get('/db3/', [Praktik9Controller::class, 'q4']);
+	Route::get('/db4/', [Praktik9Controller::class, 'q6']);
 		
 	
 
