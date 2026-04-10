@@ -21,13 +21,13 @@ class TestSeeder extends Seeder
         // User::factory(10)->create();
 
         DB::table('users1')->insert([
-            'name'=>'nikita',
-            'SecondName'=>'lz',
-            'birthday'=>'2007-01-04',
+            'name'=>'vlad',
+            'SecondName'=>'gfkoplhg',
+            'birthday'=>'1986-04-10',
             'DateOfCreationUser'=>'27.03.2026',
-            'age'=>'19',
+            'age'=>'40',
             'email'=>'coolemail@ww.ru',
-            'salary'=>'10000',
+            'salary'=>'36000',
         ]);
     }
 }
