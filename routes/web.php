@@ -176,8 +176,20 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/db15/', [Praktik9Controller::class, 'q18']);
 	Route::get('/db16/', [Praktik9Controller::class, 'q20']);
 	Route::get('/db17/', [Praktik9Controller::class, 'q21']);
-		
-	
+	Route::get('/db18/', [Praktik9Controller::class, 'q22']);
+	Route::get('/db19/', [Praktik9Controller::class, 'q23']);
+	Route::get('/db20/', [Praktik9Controller::class, 'q24']);
+	Route::get('/db21/', [Praktik9Controller::class, 'q25']);
+	Route::get('/db22/', [Praktik9Controller::class, 'q26']);
+	Route::get('/db23/', [Praktik9Controller::class, 'q27']);
+	Route::get('/db24/', [Praktik9Controller::class, 'q28']);
+	Route::get('/db25/', [Praktik9Controller::class, 'q29']);
+	Route::get('/db26/', [Praktik9Controller::class, 'q30']);
+	Route::get('/db27/', [Praktik9Controller::class, 'q31']);
+	Route::get('/db28/', [Praktik9Controller::class, 'q32']);
+	Route::get('/db29/', [Praktik9Controller::class, 'q33']);
+	Route::get('/db30/', [Praktik9Controller::class, 'q34']);
+	Route::get('/db31/', [Praktik9Controller::class, 'q35']);
 
 
 

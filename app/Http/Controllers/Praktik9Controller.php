@@ -115,4 +115,86 @@ $users = DB::table('users1')->get();
      $users = DB::table('users1')->where('id', '=', 3)->pluck('email');
       return view('pr9.q21',['users'=>$users]);
     }
+
+    public function q22 ()
+    {
+     $users = DB::table('users1')->pluck('name');
+      dump($users);
+    }
+
+      public function q23 ()
+    {
+     $users = DB::table('users1')->pluck('name');
+       return view('pr9.q23',['users'=>$users]);
+    }
+
+     public function q24 ()
+    {
+     $users = DB::table('users1')->whereBetween('age',[30,40])->get();
+      dump($users);
+    }
+
+    public function q25 ()
+    {
+     $users = DB::table('users1')->whereNotBetween('age',[30,40])->get();
+      dump($users);
+    }
+
+     public function q26 ()
+    {
+     $users = DB::table('users1')->whereIn('id',[6,8,3,9])->get();
+      dump($users);
+    }
+
+    public function q27 ()
+    {
+     $users = DB::table('users1')->whereNotIn('id',[6,8,3,9])->get();
+      dump($users);
+    }
+
+    public function q28 ()
+    {
+     $users = DB::table('users1')->where('name','=','grisha')->get();
+      dump($users);
+    }
+
+    public function q29 ()
+    {
+     $users = DB::table('users1')->where('email','=','nikitabelka@mail.ru')->get();
+      dump($users);
+    }
+    public function q30 ()
+    {
+     $users = DB::table('users1')->where('name','=','alex')->where('age','=',19)->get();
+      dump($users);
+    }
+    public function q31 ()
+    {
+     $users = DB::table('users1')->where('id','=','3')->Orwhere('age','=',19)->get();
+      dump($users);
+    }
+    public function q32 ()
+    {
+     $users = DB::table('users1')->orderby('age','desc')->get();
+      dump($users);
+    }
+
+    public function q33 ()
+    {
+     $users = DB::table('users1')->orderby('salary','asc')->get();
+      dump($users);
+    }
+    public function q34 ()
+    {
+     $users = DB::table('users1')->orderby('DateOfCreationUser','desc')->get();
+      dump($users);
+    }
+
+    public function q35 ()
+    {
+     $users = DB::table('users1')->orderby('DateOfCreationUser','asc')->get();
+      dump($users);
+    }
+
+    
 }
