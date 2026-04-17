@@ -196,5 +196,120 @@ $users = DB::table('users1')->get();
       dump($users);
     }
 
+    public function q36 ()
+    {
+     $users = DB::table('users1')->where('age','>',30)->orderby('DateOfCreationUser','desc')->get();
+      dump($users);
+    }
+
+    public function q40 ()
+    {
+     $users = DB::table('users1')->inRandomOrder()->get();
+      dump($users);
+    }
+
+    public function q41 ()
+    {
+     $users = DB::table('users1')->inRandomOrder()->first();
+      dump($users);
+    }
+
+public function q42 ()
+    {
+     $users = DB::table('users1')->whereBetween('age',[20,30])->inRandomOrder()->first();
+      dump($users);
+    }
     
+    public function q43 ()
+    {
+     $users = DB::table('users1')->take(3)->get();
+      dump($users);
+    }
+
+    public function q44 ()
+    {
+     $users = DB::table('users1')->take(3)->where('age','=',30)->get();
+      dump($users);
+    }
+
+    public function q45 ()
+    {
+     $users = DB::table('users1')->skip(4)->take(10)->get();
+      dump($users);
+    }
+
+     public function q46 ()
+    {
+     $users = DB::table('users1')->skip(2)->take(10)->where('age','=',30)->get();
+      dump($users);
+    }
+
+    public function q47 ()
+    {
+     $users = DB::table('users1')->insert([
+      'name'=>'anton',
+      'SecondName'=>'antonov',
+      'birthday'=>'2007-05-05',
+      'DateOfCreationUser'=>'15.04.2026',
+      'age'=>'18',
+      'email'=>'antonov0505@mail.ru',
+      'salary'=>'300',
+     ]);
+      
+    }
+
+    public function q48 ()
+    {
+     $users = DB::table('users1')->insertGetId([
+      'name'=>'oleg',
+      'SecondName'=>'olegov',
+      'birthday'=>'2005-08-23',
+      'DateOfCreationUser'=>'24.03.2026',
+      'age'=>'20',
+      'email'=>'olegov032026@mail.ru',
+      'salary'=>'500',
+     ]);
+     echo $users;
+      
+    }
+    public function q49 ()
+    {
+     $users = DB::table('users1')->insert([
+      [
+      'name'=>'gleb',
+      'SecondName'=>'glebov',
+      'birthday'=>'2004-07-11',
+      'DateOfCreationUser'=>'03.03.2026',
+      'age'=>'21',
+      'email'=>'glebassbarabass@mail.ru',
+      'salary'=>'700',
+      ],
+      [
+      'name'=>'ivan',
+      'SecondName'=>'ivanov',
+      'birthday'=>'2005-02-18',
+      'DateOfCreationUser'=>'23.05.2026',
+      'age'=>'21',
+      'email'=>'pro100vanya@mail.ru',
+      'salary'=>'700',
+      ],
+      [
+      'name'=>'Maxim',
+      'SecondName'=>'white',
+      'birthday'=>'2004-03-30',
+      'DateOfCreationUser'=>'28.04.2026',
+      'age'=>'22',
+      'email'=>'whitewhite@mail.ru',
+      'salary'=>'700',
+      ]
+     ]);
+      
+     public function q50 ()
+    {
+     $users = DB::table('users1')->where('id','=',6)->update([
+      'name'=>'gleb',
+     ]);
+      dump($users);
+    }
+    }
 }

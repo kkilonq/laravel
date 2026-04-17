@@ -3,7 +3,7 @@
     @foreach ($users as $user)
     <tr>
     <?php
-    dump($user)
+    <td>dump($user)</td>
     ?>
     </tr>
     @endforeach
