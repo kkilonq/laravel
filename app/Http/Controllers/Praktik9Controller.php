@@ -303,13 +303,46 @@ public function q42 ()
       'salary'=>'700',
       ]
      ]);
+    }
       
-     public function q50 ()
+    public function q50 ()
     {
      $users = DB::table('users1')->where('id','=',6)->update([
       'name'=>'gleb',
      ]);
       dump($users);
     }
+
+    public function q51 ()
+    {
+     $users = DB::table('users1')->where('age','=',30)->update([
+      'salary'=>'500',
+     ]);
+      dump($users);
     }
-}
+
+    public function q52 ()
+    {
+     $users = DB::table('users1')->where('id','=',6)->increment('age');
+      dump($users);
+    }
+
+    public function q53 ()
+    {
+     $users = DB::table('users1')->where('age','=',30)->increment('salary',100);
+      dump($users);
+    }
+
+    public function q54 ()
+    {
+     $users = DB::table('users1')->where('id','=',6)->delete();
+      dump($users);
+    }
+
+    public function q57 ()
+    {
+     $users = DB::table('users3')->leftJoin('cities','users3.CityName','=','cities.name')->get();
+      dump($users);
+    }
+    }
+

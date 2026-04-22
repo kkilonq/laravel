@@ -20,14 +20,45 @@ class TestSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        DB::table('users1')->insert([
-            'name'=>'vlad',
-            'SecondName'=>'gfkoplhg',
-            'birthday'=>'1986-04-10',
-            'DateOfCreationUser'=>'27.03.2026',
-            'age'=>'40',
-            'email'=>'coolemail@ww.ru',
-            'salary'=>'36000',
-        ]);
+        DB::table('users3')->insert([
+      [
+      'name'=>'gleb',
+      'SecondName'=>'glebov',
+      'birthday'=>'2004-07-11',
+      'DateOfCreationUser'=>'2026-03-03',
+      'age'=>'21',
+      'email'=>'glebassbarabass@mail.ru',
+      'salary'=>'700',
+      ],
+      [
+      'name'=>'ivan',
+      'SecondName'=>'ivanov',
+      'birthday'=>'2005-02-18',
+      'DateOfCreationUser'=>'2026-05-23',
+      'age'=>'21',
+      'email'=>'pro100vanya@mail.ru',
+      'salary'=>'700',
+      ],
+      [
+      'name'=>'Maxim',
+      'SecondName'=>'white',
+      'birthday'=>'2004-03-30',
+      'DateOfCreationUser'=>'2026-04-28',
+      'age'=>'22',
+      'email'=>'whitewhite@mail.ru',
+      'salary'=>'700',
+      ]
+     ]);
+     DB::table('cities')->insert([
+      [
+      'name'=>'Москва',
+      ],
+      [
+      'name'=>'Омск',
+      ],
+      [
+      'name'=>'Томск',
+      ]
+     ]);
     }
 }

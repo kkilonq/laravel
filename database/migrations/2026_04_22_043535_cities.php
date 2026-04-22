@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users1', function (Blueprint $table) {
-            $table->dateTime('updated_at');
+        Schema::create('cities', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            
     });
     }
 
@@ -21,8 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users1', function (Blueprint $table) {
-         $table->dropColumn('updated_at');
-    });
+         Schema::dropIfExists('cities');
     }
 };

@@ -2,9 +2,11 @@
     <table border = "1">
     @foreach ($users as $user)
     <tr>
+    <td>
     <?php
-    <td>dump($user)</td>
+    dump($user)
     ?>
+    </td>
     </tr>
     @endforeach
 </table>

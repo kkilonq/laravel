@@ -201,6 +201,12 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/db40/', [Praktik9Controller::class, 'q47']);
 	Route::get('/db41/', [Praktik9Controller::class, 'q48']);
 	Route::get('/db42/', [Praktik9Controller::class, 'q49']);
+	Route::get('/db43/', [Praktik9Controller::class, 'q50']);
+	Route::get('/db44/', [Praktik9Controller::class, 'q51']);
+	Route::get('/db45/', [Praktik9Controller::class, 'q52']);
+	Route::get('/db46/', [Praktik9Controller::class, 'q53']);
+	Route::get('/db47/', [Praktik9Controller::class, 'q54']);
+	Route::get('/db48/', [Praktik9Controller::class, 'q57']);
 
 
 
