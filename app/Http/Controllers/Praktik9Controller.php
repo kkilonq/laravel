@@ -341,7 +341,7 @@ public function q42 ()
 
     public function q57 ()
     {
-     $users = DB::table('users3')->leftJoin('cities','users3.CityName','=','cities.name')->get();
+     $users = DB::table('users3')->leftJoin('cities','users3.CityId','=','cities.id')->select('users3.*','cities.name as CityName')->get();
       dump($users);
     }
     }

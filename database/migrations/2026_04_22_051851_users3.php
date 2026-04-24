@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('SecondName');
             $table->date('birthday');
-            $table->foreign('CytiName');
             $table->date('DateOfCreationUser');
+            $table->foreignId('CityId');
             $table->integer('age')->nullable()->unsigned();
             $table->string('email')->comment('this email');
             $table->integer('salary')->default('0');
