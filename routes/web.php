@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostControllers;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\Praktik9Controller;
@@ -207,6 +208,7 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/db46/', [Praktik9Controller::class, 'q53']);
 	Route::get('/db47/', [Praktik9Controller::class, 'q54']);
 	Route::get('/db48/', [Praktik9Controller::class, 'q57']);
+	Route::get('/post/all/', [PostController::class, 'getAll']);
 
 
 

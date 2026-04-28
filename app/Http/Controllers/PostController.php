@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB; 
-
+use App\Models\post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -20,4 +20,9 @@ class PostController extends Controller
 		'salary' => '2000',
 	]);
 		}
+		public function getAll()
+    {
+        $posts = post::get();
+        return view('pr11.qwe', ['posts' => $posts]);
+    }
 }	
