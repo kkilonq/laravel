@@ -10,15 +10,15 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($posts as $post)
-           <tr>
-            <td>{{ $post->id }}</td>
-            <td>{{ $post->title }}</td>
-            <td>{{ $post->desc }}</td>
-            <td>{{ $post->text }}</td>
-            <td>{{ $post->date }}</td>
+
+            <tr>
+            <td>{{ $posts->id }}</td>
+            <td><a href="#">{{ $posts->title }}</a></td>
+            <td>{{ $posts->desc }}</td>
+            <td>{{ $posts->text }}</td>
+            <td>{{ $posts->date }}</td>
             </tr>
-        @endforeach
+      
     </tbody>
 </table>
 </x-layout>
