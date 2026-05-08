@@ -210,6 +210,9 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/db48/', [Praktik9Controller::class, 'q57']);
 	Route::get('/post/all/{order?}/{dir?}', [PostControllers::class, 'getAll'])->where('order','id|title|date')->where('dir','asc|desc');
 	Route::get('/post/{id}/', [PostControllers::class, 'getOne'])->where('id', '[0-9]+');
+	Route::get('/post/new', [PostControllers::class, 'newPost']);
+	Route::post('/post/new', [PostControllers::class, 'newPost']);
+	Route::get('/post/change', [PostControllers::class, 'change']);
 	
 
 
