@@ -43,5 +43,20 @@ class PostControllers extends Controller
 	$posts->save();
 
      }
+     public function editPost(Request $request, $id) {
+       $post = post::find($id); 
+         if ($request->has('submit')) 
+            {
+				$post->title = $request->title;
+				$post->desc  = $request->desc;
+				$post->date  = $request->date;
+				$post->text  = $request->text;
+				$post->save(); 
+                return redirect(('/post/all/'));
+			}
+        
+		 return view('pr12.editPost', ['post' => $post]);
+
+     }
      
 }

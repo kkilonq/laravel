@@ -213,6 +213,7 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::get('/post/new', [PostControllers::class, 'newPost']);
 	Route::post('/post/new', [PostControllers::class, 'newPost']);
 	Route::get('/post/change', [PostControllers::class, 'change']);
+	Route::match(['get', 'post'], 'post/edit/{id}', [PostControllers::class, 'editPost']);
 	
 
 

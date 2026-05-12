@@ -7,6 +7,7 @@
         <th>Описание</th>
         <th>Текст</th>
         <th>Дата</th>
+        <th>Ссылка на редоктирование</th>
         </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
             <td>{{ $post->desc }}</td>
             <td>{{ $post->text }}</td>
             <td>{{ $post->date }}</td>
+            <td><a href="/post/edit/{{ $post->id }}">ссылка</a></td>
             </tr>
         @endforeach
     </tbody>
