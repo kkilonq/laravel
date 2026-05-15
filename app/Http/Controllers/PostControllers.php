@@ -61,4 +61,10 @@ class PostControllers extends Controller
 
      }
      
+     public function delPost($id)
+     {
+        $post = post::find($id);
+        $post->delete($id);
+     }
+     
 }

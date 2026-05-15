@@ -214,6 +214,7 @@ Route::get('/user17/{profile}', function ($profile) {
 	Route::post('/post/new', [PostControllers::class, 'newPost']);
 	Route::get('/post/change', [PostControllers::class, 'change']);
 	Route::match(['get', 'post'], 'post/edit/{id}', [PostControllers::class, 'editPost']);
+	Route::get('/post/del/{id}', [PostControllers::class, 'delPost']);
 	
 
 
