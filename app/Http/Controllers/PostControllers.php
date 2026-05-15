@@ -11,6 +11,7 @@ class PostControllers extends Controller
     {
         $posts = post::orderBy($order,$dir)->get();
         return view('pr11.qwe', ['posts' => $posts]);
+
     }
     public function getOne($id)
     {
@@ -51,7 +52,8 @@ class PostControllers extends Controller
 				$post->desc  = $request->desc;
 				$post->date  = $request->date;
 				$post->text  = $request->text;
-				$post->save(); 
+				$post->save();
+                session()->flash('success','Запись успешно обновлена'); 
                 return redirect(('/post/all/'));
 			}
         

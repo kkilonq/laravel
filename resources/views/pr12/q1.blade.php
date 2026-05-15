@@ -10,7 +10,7 @@
         <input type="text" name="desc">
     </p>
      <p>
-        <label>Текс:</label>
+        <label>Текст:</label>
         <input type="text" name="text">
     </p>
     
